@@ -11,6 +11,7 @@ func main() {
 }
 
 func hello(payload []byte) ([]byte, error) {
+	wapc.ConsoleLog("Logging something")
 	wapc.HostCall("myBinding", "sample", "hello", []byte("Simon"))
 	return []byte("Hello"), nil
 }

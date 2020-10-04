@@ -37,3 +37,7 @@ func hostErrorLen() uint32
 //go:wasm-module wapc
 //go:export __host_error
 func hostError(ptr uintptr)
+
+//go:wasm-module wapc
+//go:export __console_log
+func consoleLog(ptr uintptr, len uint32)

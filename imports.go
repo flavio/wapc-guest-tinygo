@@ -23,3 +23,5 @@ func hostResponse(ptr uintptr) {}
 func hostErrorLen() uint32 { return 0 }
 
 func hostError(ptr uintptr) {}
+
+func consoleLog(ptr uintptr, len uint32) {}

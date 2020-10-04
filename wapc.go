@@ -87,6 +87,11 @@ func HostCall(binding, namespace, operation string, payload []byte) ([]byte, err
 	return response, nil
 }
 
+// ConsoleLog invokes the host's __console_log function which writes to the output designated by the host.
+func ConsoleLog(message string) {
+	consoleLog(stringToPointer(message), uint32(len(message)))
+}
+
 //go:inline
 func bytesToPointer(s []byte) uintptr {
 	return (*(*reflect.SliceHeader)(unsafe.Pointer(&s))).Data
